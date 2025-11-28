@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Treningowy dla SlayQueens</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ładujemy eleganckie fonty -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>WEEKLY WORKOUT <span class="script-font">Schedule</span></h1>
+    </header>
+
+    <div class="container">
+        
+        <!-- Sekcja Wyboru Użytkownika -->
+        <div id="user-selection" class="card">
+            <h2>Witaj! Wybierz, kto dziś trenuje:</h2>
+            <!-- data-user to nazwa, która zapisze się w bazie danych! -->
+            <button class="user-button" data-user="Julia">Julia</button>
+            <button class="user-button" data-user="Natalia">Natalia</button>
+        </div>
+
+        <!-- Główna Sekcja Treningu (Ukryta po załadowaniu) -->
+        <div id="workout-schedule" class="card hidden">
+            <h2>Plan Treningowy na Dziś (<span id="current-user-display"></span>)</h2>
+            <p id="current-day-display" class="date-display"></p>
+            
+            <div id="training-content">
+                <p>Wybierz użytkownika, aby załadować plan...</p>
+            </div>
+            
+            <button id="save-button" disabled>Zapisz Dzień Treningowy</button>
+        </div>
+
+    </div>
+
+    <!-- Okno Modalne dla Instrukcji Ćwiczeń -->
+    <div id="instructionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div id="modal-body">
+                <!-- Tu ładowany jest film instruktażowy (iframe) -->
+                <p>Ładowanie instrukcji...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plik JavaScript, który zawiera całą logikę -->
+    <script src="app.js"></script> 
+</body>
+</html>
