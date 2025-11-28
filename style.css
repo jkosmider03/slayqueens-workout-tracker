@@ -1,0 +1,159 @@
+/* Definicja Palety Kolorów i Fontów */
+:root {
+    --color-primary: #3c3c3c; /* Ciemny Szary dla tekstu */
+    --color-background: #fcf8f0; /* Bardzo jasny beż/ecru */
+    --color-beige: #e0d8c7; /* Ciepły Beż */
+    --color-accent: #a88a6d; /* Brązowy/Złoty akcent (jak pismo ręczne) */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-script: 'Playfair Display', serif; /* Użyjemy tego samego fontu dla napisu "Schedule" */
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    padding: 40px 20px 20px;
+    background-color: var(--color-beige);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.script-font {
+    font-family: var(--font-script);
+    color: var(--color-accent);
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: normal;
+    text-transform: none;
+    line-height: 0.8;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Stylizacja Przycisków */
+.user-button, #save-button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.user-button:hover, #save-button:hover:not(:disabled) {
+    background-color: #8c735d; /* Ciemniejszy odcień akcentu */
+}
+
+#save-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsywność dla Telefonów */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .script-font {
+        font-size: 2.5rem;
+    }
+    .user-button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+/* --- Stylizacja Okna Modalnego --- */
+.modal {
+    display: none; /* Ukryte domyślnie */
+    position: fixed; 
+    z-index: 100; /* Upewnia się, że jest na wierzchu */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); /* Czarny, półprzezroczysty */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto; /* 10% od góry i wyśrodkowane */
+    padding: 20px;
+    border: 1px solid var(--color-beige);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-body {
+    padding-top: 10px;
+}
+
+/* Stylizacja dla responsywnych wideo/infografik */
+#modal-body iframe, #modal-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}

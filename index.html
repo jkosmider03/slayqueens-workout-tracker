@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Treningowy dla SlayQueens</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>WEEKLY WORKOUT <span class="script-font">Schedule</span></h1>
+    </header>
+
+    <div class="container">
+        
+        <div id="user-selection" class="card">
+            <h2>Witaj! Wybierz, kto dziś trenuje:</h2>
+            <button class="user-button" data-user="Narzeczona">Narzeczona</button>
+            <button class="user-button" data-user="Przyjaciolka">Przyjaciółka</button>
+        </div>
+
+        <div id="workout-schedule" class="card hidden">
+            <h2>Plan Treningowy na Dziś (<span id="current-user-display"></span>)</h2>
+            <p id="current-day-display"></p>
+            
+            <div id="training-content">
+                <p>Ładowanie planu...</p>
+            </div>
+            
+            <button id="save-button" disabled>Zapisz Dzień Treningowy</button>
+        </div>
+
+    </div>
+<div id="instructionModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 id="modal-title"></h3>
+        <div id="modal-body">
+            <p>Ładowanie instrukcji...</p>
+        </div>
+    </div>
+</div>
+    <script src="app.js"></script> 
+    </body>
+</html>
