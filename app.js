@@ -80,7 +80,7 @@ function renderWorkout() {
 // --- 2. Obsługa Wyboru Użytkownika ---
 document.querySelectorAll('.user-button').forEach(button => {
     button.addEventListener('click', (e) => {
-        currentUser = e.target.getAttribute('data-user');
+
         
         // Ukrycie selekcji i pokazanie planu
         document.getElementById('user-selection').classList.add('hidden');
@@ -221,4 +221,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
 });
