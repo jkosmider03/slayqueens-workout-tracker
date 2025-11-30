@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Treningowy - Julia & Natalia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>WEEKLY WORKOUT <span class="script-font">Schedule</span></h1>
+    </header>
+
+    <div class="container">
+        
+        <!-- EKRAN 1: Wybór Użytkownika -->
+        <div id="user-selection" class="card">
+            <h2>Cześć! Kto dziś trenuje?</h2>
+            <div class="buttons-row">
+                <button class="user-button" data-user="Julia">Julia</button>
+                <button class="user-button" data-user="Natalia">Natalia</button>
+            </div>
+            
+            <hr class="divider">
+            
+            <!-- Nowa Opcja: Podgląd Tygodnia -->
+            <button id="view-week-btn" class="secondary-button">📅 Zobacz Plan Tygodnia</button>
+        </div>
+
+        <!-- EKRAN 2: Główna Sekcja Treningu -->
+        <div id="workout-schedule" class="card hidden">
+            <div class="header-row">
+                <button id="back-from-workout" class="small-back-btn">← Wróć</button>
+                <div class="day-selector">
+                    <label for="day-select">Plan na:</label>
+                    <select id="day-select">
+                        <!-- Opcje generowane przez JS -->
+                    </select>
+                </div>
+            </div>
+
+            <h2>Trening: <span id="current-user-display" class="highlight-text"></span></h2>
+            
+            <div id="training-content">
+                <p>Ładowanie planu...</p>
+            </div>
+            
+            <!-- Sekcja Schłodzenia (Stała) -->
+            <div class="cooldown-section">
+                <h3>🧊 Schłodzenie Statyczne</h3>
+                <p class="clickable-details" data-type="cooldown">Kliknij, aby zobaczyć ćwiczenia rozciągające ▾</p>
+            </div>
+
+            <button id="save-button" disabled>Zapisz Dzień Treningowy</button>
+        </div>
+
+        <!-- EKRAN 3: Widok Tygodnia (Tylko do odczytu) -->
+        <div id="week-view" class="card hidden">
+            <div class="header-row">
+                 <button id="back-from-week" class="small-back-btn">← Wróć</button>
+                 <h2>Plan Tygodniowy</h2>
+            </div>
+            <div id="week-content" class="week-grid">
+                <!-- Generowane przez JS -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Okno Modalne (Uniwersalne: Wideo, Opis, Tip) -->
+    <div id="instructionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-title">Info</h3>
+            <div id="modal-body">
+                <p>Ładowanie...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script> 
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* --- Paleta Kolorów i Fonty --- */
+:root {
+    --color-primary: #3c3c3c; 
+    --color-background: #fcf8f0; 
+    --color-beige: #e0d8c7; 
+    --color-accent: #a88a6d; 
+    --color-warning: #e6b800; /* Kolor dla wykrzyknika */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-script: 'Playfair Display', serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    padding: 30px 20px;
+    background-color: var(--color-beige);
+    border-bottom: 3px solid var(--color-accent);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.script-font {
+    font-family: var(--font-script);
+    color: var(--color-accent);
+    font-size: 2.8rem;
+    font-style: italic;
+    text-transform: none;
+    line-height: 0.8;
+}
+
+.highlight-text {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 20px 0;
+}
+
+/* --- Przyciski --- */
+.user-button, #save-button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.user-button:hover, #save-button:hover:not(:disabled) {
+    background-color: #8c735d;
+    transform: translateY(-2px);
+}
+
+#save-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: 2px solid var(--color-beige);
+    color: var(--color-primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.secondary-button:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.small-back-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+.small-back-btn:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* --- Selektor Dnia --- */
+.day-selector label {
+    font-size: 0.85rem;
+    margin-right: 5px;
+    color: #666;
+}
+.day-selector select {
+    padding: 5px;
+    border: 1px solid var(--color-beige);
+    border-radius: 5px;
+    font-family: var(--font-body);
+}
+
+/* --- Tipy i Ikony --- */
+.tip-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-warning);
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.tip-icon:hover {
+    transform: scale(1.2);
+}
+
+.info-icon {
+    font-size: 0.9em;
+    margin-left: 5px;
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+/* --- Schłodzenie --- */
+.cooldown-section {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #fcfcfc;
+    border: 1px dashed var(--color-beige);
+    border-radius: 8px;
+}
+.cooldown-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+}
+.clickable-details {
+    color: var(--color-primary);
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+.clickable-details:hover {
+    color: var(--color-accent);
+}
+
+/* --- Widok Tygodnia --- */
+.week-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: left;
+}
+.week-day-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fafafa;
+}
+.week-day-card h4 {
+    margin: 0 0 10px 0;
+    color: var(--color-accent);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.week-day-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+.week-day-card li {
+    margin-bottom: 5px;
+}
+
+/* --- Okno Modalne --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); 
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: black;
+}
+
+#modal-body iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    display: block;
+    border-radius: 8px;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .script-font { font-size: 2.2rem; }
+    .user-button { width: 100%; margin: 5px 0; }
+    .header-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
