@@ -28,7 +28,7 @@ const WEEKLY_PLAN = {
             sets: 3, 
             reps: "8-12", 
             isDataEntry: true, 
-            link: "https://www.youtube.com/embed/9vK4GVohtHE?si=w3_zwDmDIqlUwfQu",
+            link: "https://www.youtube.com/embed/D-2CRYjRees?si=ysAhhC53yb_z1phy",
             tip: "Przytrzymaj napięcie pośladków w górze przez 1-2 sekundy. Nie wyginaj odcinka lędźwiowego! Patrz prosto przed siebie lub na lekko uniesiony sufit (nie zginaj szyi), utrzymuj brodę lekko schowaną. W górnej fazie mocno ściskaj pośladki, a w dolnej nie kładź sztangi na podłodze, tylko kontroluj ruch." 
         }, 
         { 
@@ -513,4 +513,5 @@ document.addEventListener('DOMContentLoaded', () => {
         .clickable-ex-name:hover { color: var(--color-accent); border-bottom-style: solid; }
     `;
     document.head.appendChild(style);
+
 });
